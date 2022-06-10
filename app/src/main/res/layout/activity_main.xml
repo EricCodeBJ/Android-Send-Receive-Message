@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:text="SMS to send"/>
+
+    <EditText
+        android:id="@+id/receiver_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:hint="+229 XX XX XX XX"
+        android:inputType="phone"
+        android:gravity="start"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/text_to_send"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:hint="Type here"
+        android:inputType="text"
+        android:gravity="start"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1.1"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:alpha=".7"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-light"
+            android:text="Statut:"/>
+        <TextView
+            android:id="@+id/send_sms_statut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="end"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:text="-"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6246ea"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        android:text="SEND"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:text="SMS received"/>
+
+    <TextView
+        android:id="@+id/sender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#C3C3C3"
+        android:hint="From: "
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/receive_sms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="15dp"
+        android:background="#C3C3C3"
+        android:textSize="18sp"
+        android:hint="..."
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:layout_weight="1"/>
+
+</LinearLayout>
